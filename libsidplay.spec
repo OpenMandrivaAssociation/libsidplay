@@ -11,7 +11,6 @@ Release: %{release}
 License: GPL
 Group: System/Libraries
 Source: http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/%{name}-%{version}.tar.bz2
-Icon: sidplay.xpm
 BuildRoot: %{_tmppath}/%{name}-buildroot
 URL: http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/linux.html
  
