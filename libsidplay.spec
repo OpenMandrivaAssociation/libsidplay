@@ -20,9 +20,7 @@ you can play musics from Commodore 64 (or compatible) programs.
 %package -n	%{libname}
 Summary:	A Commodore 64 music player and SID chip emulator library.
 Group:		System/Libraries
-%if "%{_lib}" != "lib"
 Provides:	%{name} = %{version}
-%endif
 
 %description -n	%{libname}
 This library provides the Sound Interface Device (SID) chip emulator
@@ -34,10 +32,7 @@ Summary:	Libraries and include files for developing libsidplay applications.
 Group:		Development/C++
 Requires:	%{libname} = %{version}
 Provides:	sidplay-devel = %{version}-%{release}
-%if "%{_lib}" != "lib"
 Provides:	%{name}-devel = %{version}-%{release}
-%endif
-Provides:	%{mklibname sidplay 1 -d} = %{version}
 Obsoletes:	%{mklibname sidplay 1 -d}
 
 %description -n	%{develname}
