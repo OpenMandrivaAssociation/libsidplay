@@ -2,7 +2,7 @@
 %define libname %mklibname sidplay %{major}
 %define develname %mklibname sidplay -d
 
-Summary:	A Commodore 64 music player and SID chip emulator library.
+Summary:	A Commodore 64 music player and SID chip emulator library
 Name:		libsidplay
 Version:	1.36.59
 Release:	%mkrel 3
@@ -18,7 +18,7 @@ engine that is used by music player programs like SIDPLAY. With it
 you can play musics from Commodore 64 (or compatible) programs.
 
 %package -n	%{libname}
-Summary:	A Commodore 64 music player and SID chip emulator library.
+Summary:	A Commodore 64 music player and SID chip emulator library
 Group:		System/Libraries
 Provides:	%{name} = %{version}
 
@@ -28,7 +28,7 @@ engine that is used by music player programs like SIDPLAY. With it
 you can play musics from Commodore 64 (or compatible) programs.
 
 %package -n	%{develname}
-Summary:	Libraries and include files for developing libsidplay applications.
+Summary:	Libraries and include files for developing libsidplay applications
 Group:		Development/C++
 Requires:	%{libname} = %{version}
 Provides:	sidplay-devel = %{version}-%{release}
