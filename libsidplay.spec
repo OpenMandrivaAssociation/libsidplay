@@ -10,7 +10,6 @@ License:	GPL
 Group:		System/Libraries
 URL:		http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/linux.html
 Source:		http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/%{name}-%{version}.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-buildroot
  
 %description
 This library provides the Sound Interface Device (SID) chip emulator
