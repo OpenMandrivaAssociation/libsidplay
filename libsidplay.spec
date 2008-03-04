@@ -5,7 +5,7 @@
 Summary:	A Commodore 64 music player and SID chip emulator library
 Name:		libsidplay
 Version:	1.36.59
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPL
 Group:		System/Libraries
 URL:		http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/linux.html
