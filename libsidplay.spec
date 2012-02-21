@@ -5,7 +5,7 @@
 Summary:	A Commodore 64 music player and SID chip emulator library
 Name:		libsidplay
 Version:	1.36.60
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPLv2+
 Group:		System/Libraries
 URL:		http://home.arcor.de/ms2002sep/bak/
@@ -55,14 +55,7 @@ applications that use libsidplay.
 rm -rf %{buildroot}
 
 %makeinstall
-
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
+rm -f %buildroot%_libdir/*.la
 
 %clean
 rm -rf %{buildroot}
