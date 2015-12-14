@@ -1,6 +1,7 @@
 %define major 1
 %define libname %mklibname sidplay %{major}
 %define devname %mklibname sidplay -d
+%define _disable_lto 1
 
 Summary:	A Commodore 64 music player and SID chip emulator library
 Name:		libsidplay
