@@ -1,0 +1,52 @@
+diff -up libsidplay-1.36.60/src/6510_.cpp.omv~ libsidplay-1.36.60/src/6510_.cpp
+--- libsidplay-1.36.60/src/6510_.cpp.omv~	2018-05-19 17:55:10.380085796 +0200
++++ libsidplay-1.36.60/src/6510_.cpp	2018-05-19 17:55:16.909935950 +0200
+@@ -168,7 +168,7 @@ inline void resetSR()
+ 
+ inline ubyte codeSR()
+ {
+-	register ubyte tempSR = CF;
++	ubyte tempSR = CF;
+ 	tempSR |= (ZF<<1);
+ 	tempSR |= (IF<<2);
+ 	tempSR |= (DF<<3);
+diff -up libsidplay-1.36.60/src/6581_.cpp.omv~ libsidplay-1.36.60/src/6581_.cpp
+--- libsidplay-1.36.60/src/6581_.cpp.omv~	2018-05-19 17:59:29.718132549 +0200
++++ libsidplay-1.36.60/src/6581_.cpp	2018-05-19 17:59:35.853991655 +0200
+@@ -470,9 +470,9 @@ inline void waveCalcCycleLen(struct sidO
+ //	else
+ //	{
+ #if defined(DIRECT_FIXPOINT)
+-		register uword diff = pVoice->cycleLenCount - pVoice->cycleLen.w[HI];
++		uword diff = pVoice->cycleLenCount - pVoice->cycleLen.w[HI];
+ #else
+-		register uword diff = pVoice->cycleLenCount - pVoice->cycleLen;
++		uword diff = pVoice->cycleLenCount - pVoice->cycleLen;
+ #endif
+ 		if ( pVoice->wavePre[diff].len != pVoice->cycleLenCount )
+ 		{
+diff -up libsidplay-1.36.60/src/samples.cpp.omv~ libsidplay-1.36.60/src/samples.cpp
+--- libsidplay-1.36.60/src/samples.cpp.omv~	2018-05-19 18:00:47.650342921 +0200
++++ libsidplay-1.36.60/src/samples.cpp	2018-05-19 18:02:55.304411007 +0200
+@@ -77,7 +77,9 @@ sampleChannel ch4, ch5;
+ 
+ const sbyte galwayNoiseTab1[16] =
+ {
+-	0x80,0x91,0xa2,0xb3,0xc4,0xd5,0xe6,0xf7,
++	static_cast<sbyte>(0x80),static_cast<sbyte>(0x91),static_cast<sbyte>(0xa2),
++	static_cast<sbyte>(0xb3),static_cast<sbyte>(0xc4),static_cast<sbyte>(0xd5),
++	static_cast<sbyte>(0xe6),static_cast<sbyte>(0xf7),
+ 	0x08,0x19,0x2a,0x3b,0x4c,0x5d,0x6e,0x7f
+ };
+ 
+@@ -88,7 +90,9 @@ const sbyte sampleConvertTab[16] =
+ {
+ //  0x81,0x99,0xaa,0xbb,0xcc,0xdd,0xee,0xff,
+ //  0x00,0x11,0x22,0x33,0x44,0x55,0x66,0x7f
+-	0x81,0x90,0xa0,0xb0,0xc0,0xd0,0xe0,0xf0,
++	static_cast<sbyte>(0x81),static_cast<sbyte>(0x90),static_cast<sbyte>(0xa0),
++	static_cast<sbyte>(0xb0),static_cast<sbyte>(0xc0),static_cast<sbyte>(0xd0),
++	static_cast<sbyte>(0xe0),static_cast<sbyte>(0xf0),
+ 	0x00,0x10,0x20,0x30,0x40,0x50,0x60,0x70
+ };
+ 

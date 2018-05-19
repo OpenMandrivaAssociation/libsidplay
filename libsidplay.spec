@@ -6,11 +6,12 @@
 Summary:	A Commodore 64 music player and SID chip emulator library
 Name:		libsidplay
 Version:	1.36.60
-Release:	14
+Release:	15
 License:	GPLv2+
 Group:		System/Libraries
 Url:		http://home.arcor.de/ms2002sep/bak/
 Source0:	%{name}-%{version}.tar.bz2
+Patch0:		libsidplay-1.36.60-c++17.patch
  
 %description
 This library provides the Sound Interface Device (SID) chip emulator
@@ -38,10 +39,10 @@ This package contains the header files and the static library for compiling
 applications that use libsidplay. 
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static \
 	--enable-optfixpoint \
 	--enable-optendian
@@ -49,7 +50,7 @@ applications that use libsidplay.
 %make
 
 %install
-%makeinstall
+%make_install
 
 %files -n %{libname}
 %{_libdir}/libsidplay.so.%{major}*
