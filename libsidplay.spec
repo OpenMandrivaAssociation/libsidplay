@@ -6,7 +6,7 @@
 Summary:	A Commodore 64 music player and SID chip emulator library
 Name:		libsidplay
 Version:	1.36.60
-Release:	15
+Release:	16
 License:	GPLv2+
 Group:		System/Libraries
 Url:		http://home.arcor.de/ms2002sep/bak/
