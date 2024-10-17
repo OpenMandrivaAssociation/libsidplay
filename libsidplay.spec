@@ -9,7 +9,7 @@ Version:	1.36.60
 Release:	18
 License:	GPLv2+
 Group:		System/Libraries
-Url:		http://home.arcor.de/ms2002sep/bak/
+Url:		https://home.arcor.de/ms2002sep/bak/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		libsidplay-1.36.60-c++17.patch
  
