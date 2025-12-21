@@ -13,6 +13,11 @@ Url:		https://home.arcor.de/ms2002sep/bak/
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		libsidplay-1.36.60-c++17.patch
  
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 This library provides the Sound Interface Device (SID) chip emulator
 engine that is used by music player programs like SIDPLAY. With it
